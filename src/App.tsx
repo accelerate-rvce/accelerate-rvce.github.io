@@ -3,6 +3,7 @@ import { HashRouter as Router, Routes, Route, useLocation } from 'react-router-d
 import Navbar from './components/Navbar';
 import Footer from './components/Footer';
 import Home from './pages/Home';
+import Hack4SDG from './pages/Hack4SDG';
 import Team from './pages/Team';
 import Contribute from './pages/Contribute';
 import Resources from './pages/Resources';
@@ -30,6 +31,7 @@ function App() {
         <main className="flex-grow">
           <Routes>
             <Route path="/" element={<Home />} />
+            <Route path="/events/hack4sdg" element={<Hack4SDG />} />
             <Route path="/team" element={<Team />} />
             <Route path="/contribute" element={<Contribute />} />
             <Route path="/resources" element={<Resources />} />

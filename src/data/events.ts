@@ -11,6 +11,16 @@ export interface ClubEvent {
 
 export const events: ClubEvent[] = [
   {
+    id: "hack4sdg-2026",
+    year: "2026",
+    date: "September 26, 2026",
+    title: "HACK4SDG Ideathon",
+    type: "Competition",
+    description: "Accelerate's ideathon where student teams pitched tech solutions mapped to the UN Sustainable Development Goals — judged live with audience Q&A. See the photo gallery.",
+    link: "#/events/hack4sdg",
+    status: "completed"
+  },
+  {
     id: "hack-rvce-2026",
     year: "2026",
     date: "March 14-15, 2026",

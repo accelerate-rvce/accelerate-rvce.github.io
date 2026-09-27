@@ -2,6 +2,7 @@ import React from 'react';
 import { LogoBackground } from '../components/LogoBackground';
 import { projects } from '../data/projects';
 import { events } from '../data/events';
+import { hack4sdgInfo, hack4sdgPhotos } from '../data/hack4sdg';
 import { 
   Code2, 
   BookOpen, 
@@ -368,6 +369,16 @@ export const Home: React.FC = () => {
                         {event.title}
                       </h3>
                       <p className="text-brand-muted text-xs mt-1.5 leading-relaxed">{event.description}</p>
+                      {event.link && (
+                        <a
+                          href={event.link}
+                          target={event.link.startsWith('#') ? undefined : '_blank'}
+                          rel="noopener noreferrer"
+                          className="inline-flex items-center space-x-1 mt-2 text-[10px] font-mono text-brand-cyan hover:text-brand-white transition-colors uppercase tracking-widest"
+                        >
+                          <span>VIEW RECAP →</span>
+                        </a>
+                      )}
                     </div>
                   ))}
                 </div>
@@ -388,10 +399,69 @@ export const Home: React.FC = () => {
                       {event.title}
                     </h3>
                     <p className="text-brand-muted text-xs mt-1.5 leading-relaxed">{event.description}</p>
+                    {event.link && event.link !== '#' && (
+                      <a
+                        href={event.link}
+                        target={event.link.startsWith('#') ? undefined : '_blank'}
+                        rel="noopener noreferrer"
+                        className="inline-flex items-center space-x-1 mt-2 text-[10px] font-mono text-brand-muted hover:text-brand-cyan transition-colors uppercase tracking-widest"
+                      >
+                        <span>VIEW RECAP →</span>
+                      </a>
+                    )}
                   </div>
                 ))}
               </div>
             </div>
+          </div>
+        </div>
+      </section>
+
+      {/* 7b. HACK4SDG Gallery Strip */}
+      <section id="hack4sdg" className="py-16 md:py-24 bg-brand-surface/20 border-b border-brand-border">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="flex flex-col sm:flex-row sm:items-end justify-between mb-10 gap-6">
+            <div>
+              <span className="font-mono text-[9px] tracking-widest bg-brand-cyan/10 text-brand-cyan px-2 py-0.5 rounded border border-brand-cyan/20 uppercase font-semibold">
+                LATEST EVENT // {hack4sdgInfo.date.toUpperCase()}
+              </span>
+              <h2 className="mt-3 font-display font-extrabold text-3xl md:text-4xl text-brand-white uppercase tracking-wider">
+                {hack4sdgInfo.title}
+              </h2>
+              <p className="mt-3 text-xs sm:text-sm text-brand-muted max-w-xl leading-relaxed">
+                {hack4sdgInfo.tagline} {hack4sdgPhotos.length} photos from the ideathon floor.
+              </p>
+            </div>
+            <button
+              onClick={() => navigate('/events/hack4sdg')}
+              className="inline-flex items-center space-x-1 px-4 py-2 rounded border border-brand-border hover:border-brand-cyan text-[10px] font-semibold text-brand-white tracking-wider transition-colors cursor-pointer shrink-0"
+            >
+              <span>VIEW FULL GALLERY</span>
+              <ArrowUpRight className="w-3.5 h-3.5 text-brand-cyan" />
+            </button>
+          </div>
+
+          <div className="grid grid-cols-2 lg:grid-cols-4 gap-4">
+            {hack4sdgPhotos.slice(0, 4).map((photo) => (
+              <button
+                key={photo.src}
+                type="button"
+                onClick={() => navigate('/events/hack4sdg')}
+                className="group text-left rounded border border-brand-border bg-brand-surface overflow-hidden hover:border-brand-cyan transition-colors cursor-pointer"
+              >
+                <div className="overflow-hidden">
+                  <img
+                    src={photo.src}
+                    alt={photo.caption}
+                    loading="lazy"
+                    className="w-full h-44 sm:h-52 object-cover group-hover:scale-[1.03] transition-transform duration-300"
+                  />
+                </div>
+                <p className="px-3 py-2.5 font-mono text-[9px] text-brand-muted uppercase tracking-widest group-hover:text-brand-white transition-colors truncate">
+                  {photo.caption}
+                </p>
+              </button>
+            ))}
           </div>
         </div>
       </section>
