@@ -30,68 +30,56 @@ export const teamGroups: TeamGroup[] = [
     category: "Core Team",
     members: [
       {
-        name: "Siddharth Mehta",
-        role: "Club President",
-        github: "https://github.com",
-        linkedin: "https://linkedin.com"
+        name: "Megha",
+        role: "President"
       },
       {
-        name: "Ananya Sharma",
-        role: "Vice President",
-        github: "https://github.com",
-        linkedin: "https://linkedin.com"
+        name: "Sutej",
+        role: "Vice President"
       },
       {
-        name: "Rohan Kulkarni",
-        role: "General Secretary",
-        github: "https://github.com",
-        linkedin: "https://linkedin.com"
-      }
-    ]
-  },
-  {
-    category: "Technical Leads",
-    members: [
-      {
-        name: "Kabir Sen",
-        role: "Systems & Cloud Lead",
-        github: "https://github.com",
-        linkedin: "https://linkedin.com"
+        name: "Ayush",
+        role: "Vice President"
       },
       {
-        name: "Neha Murthy",
-        role: "AI/ML Lead",
-        github: "https://github.com",
-        linkedin: "https://linkedin.com"
+        name: "Sudeep",
+        role: "Secretary"
       },
       {
-        name: "Vikram Adve",
-        role: "Cybersecurity Lead",
-        github: "https://github.com",
-        linkedin: "https://linkedin.com"
+        name: "Rayyan",
+        role: "Secretary"
       },
       {
-        name: "Divya Nambiar",
-        role: "Frontend & UI Design Lead",
-        github: "https://github.com",
-        linkedin: "https://linkedin.com"
-      }
-    ]
-  },
-  {
-    category: "Club Alumni & Mentors",
-    members: [
-      {
-        name: "Amit Rao",
-        role: "Software Engineer @ Vercel (Class of '24)",
-        github: "https://github.com",
-        linkedin: "https://linkedin.com"
+        name: "Harshita",
+        role: "Finance & Sponsorship Head"
       },
       {
-        name: "Priyanka Gowda",
-        role: "Systems Engineer @ Cloudflare (Class of '23)",
-        github: "https://github.com",
-        linkedin: "https://linkedin.com"
+        name: "Ansh",
+        role: "Treasurer"
+      },
+      {
+        name: "Noyonika",
+        role: "Design Head"
+      },
+      {
+        name: "Shreyas Kale",
+        role: "Media Head"
+      },
+      {
+        name: "Sandesh",
+        role: "CP Head"
+      },
+      {
+        name: "Vaibhav Rathod",
+        role: "Dev Head"
+      },
+      {
+        name: "Kasvi",
+        role: "AIML Head"
+      },
+      {
+        name: "Gurupranesh",
+        role: "Cybersecurity Head"
       }
     ]
   }
